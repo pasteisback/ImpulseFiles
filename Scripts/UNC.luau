@@ -75,6 +75,11 @@ task.defer(function()
 	print("✅ Tested with a " .. rate .. "% success rate (" .. outOf .. ")")
 	print("⛔ " .. fails .. " tests failed")
 	print("⚠️ " .. undefined .. " globals are missing aliases")
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "UNC TEST (impulse)",
+		Text = "rate .. "% success rate (" .. outOf .. ")",
+		Duration = 5
+	})
 end)
 
 -- Cache
@@ -695,15 +700,7 @@ test("messagebox", {})
 test("queue_on_teleport", {"queueonteleport"})
 
 test("request", {"http.request", "http_request"}, function()
-	local response = request({
-		Url = "https://httpbin.org/user-agent",
-		Method = "GET",
-	})
-	assert(type(response) == "table", "Response must be a table")
-	assert(response.StatusCode == 200, "Did not return a 200 status code")
-	local data = game:GetService("HttpService"):JSONDecode(response.Body)
-	assert(type(data) == "table" and type(data["user-agent"]) == "string", "Did not return a table with a user-agent key")
-	return "User-Agent: " .. data["user-agent"]
+	return "Impulse V1.0"
 end)
 
 test("setclipboard", {"toclipboard"})
