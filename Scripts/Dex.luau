@@ -1,5 +1,9 @@
 --credits for script to weraredevs.net even tho all execs are rats
-
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Impulse",
+	Text = "IMPULSE ON TOP! dsc.gg/impulserbx",
+	Duration = 9
+})
 CreateGui = function()
 local NewGuiPart1 = Instance.new("ScreenGui")
 local NewGuiPart2 = Instance.new("Frame")
