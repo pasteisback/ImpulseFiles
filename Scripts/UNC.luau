@@ -75,11 +75,6 @@ task.defer(function()
 	print("✅ Tested with a " .. rate .. "% success rate (" .. outOf .. ")")
 	print("⛔ " .. fails .. " tests failed")
 	print("⚠️ " .. undefined .. " globals are missing aliases")
-	game:GetService("StarterGui"):SetCore("SendNotification",{
-		Title = "UNC TEST (impulse)",
-		Text = "rate .. "% success rate (" .. outOf .. ")",
-		Duration = 5
-	})
 end)
 
 -- Cache
