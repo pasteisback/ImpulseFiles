@@ -1,3 +1,8 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Impulse",
+	Text = "IMPULSE ON TOP! dsc.gg/impulserbx",
+	Duration = 9
+})
 local UserInputService = game:GetService("UserInputService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
